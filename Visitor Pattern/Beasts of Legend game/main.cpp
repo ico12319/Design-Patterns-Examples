@@ -15,4 +15,13 @@ int main(int argc, const char * argv[]) {
     
     size_t battlesWon = game.beastsBeatenByMonster(player);
     std::cout<<battlesWon<<std::endl;
+
+    delete beast1;
+    delete beast2;
+    delete beast3;
+    delete beast4;
+    delete beast5;
+    delete beast6;
+    delete beast7;
+    delete player;
 }
