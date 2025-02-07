@@ -3,7 +3,7 @@
 
 class file : public file_entity{
 private:
-    size_t fail_size = 0;
+    size_t file_size = 0;
     
 public:
     file(size_t size);
