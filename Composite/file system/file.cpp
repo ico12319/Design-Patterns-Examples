@@ -1,6 +1,6 @@
 #include "file.h"
 
-file::file(size_t size) : fail_size(size){}
+file::file(size_t size) : file_size(size){}
 
 size_t file::size() const{
     return fail_size;
