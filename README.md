@@ -1,4 +1,4 @@
-Here, you'll find simple and clear implementations of various design patterns in C++. 
+Here, you'll find simple and clear implementations of various design patterns. 
 Whether you're new to design patterns or just looking for some practical examples, this repo aims to help you understand and apply these concepts in your own projects.
 Included Design Patterns(for now): 
 1. Visitor pattern: The Visitor pattern lets you add further operations to objects without having to modify them. It's great for when you need to perform different actions on a group of related objects.
