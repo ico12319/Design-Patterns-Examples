@@ -1,0 +1,32 @@
+{
+  "name": "Electronics",
+  "type": "category",
+  "children": [
+    {
+      "name": "MacBook",
+      "type": "product",
+      "price": 1000
+    },
+    {
+      "name": "Samsung Galaxy S21",
+      "type": "product",
+      "price": 500
+    },
+    {
+      "name": "Accessories",
+      "type": "category",
+      "children": [
+        {
+          "name": "Mouse Razer Phantom 8",
+          "type": "product",
+          "price": 30
+        },
+        {
+          "name": "Keyboard Coogar 21",
+          "type": "product",
+          "price": 45
+        }
+      ]
+    }
+  ]
+}
