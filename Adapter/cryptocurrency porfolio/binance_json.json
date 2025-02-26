@@ -1,0 +1,11 @@
+{
+    "balance": 1000.0,
+    "assets": [
+      { "name": "BTC", "amount": 0.05 },
+      { "name": "ETH", "amount": 1.0 }
+    ],
+    "transactions": [
+      { "id": "txn123", "type": "buy", "amount": 0.05, "asset": "BTC" }
+    ]
+  }
+  

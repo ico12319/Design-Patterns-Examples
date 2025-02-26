@@ -1,0 +1,11 @@
+{
+    "total": "1200.0",
+    "currencies": [
+      { "symbol": "BTC", "balance": "0.07" },
+      { "symbol": "ETH", "balance": "2.0" }
+    ],
+    "trades": [
+      { "tradeId": "trade456", "action": "sell", "quantity": "0.02", "currency": "BTC" }
+    ]
+  }
+  
