@@ -9,5 +9,5 @@ int main(int argc, const char * argv[]) {
     std::cout<<calculator.evaluate()<<std::endl;
     
     
-    
+
 }
