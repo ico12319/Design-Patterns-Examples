@@ -26,13 +26,11 @@ func isExpressionEnclosed(expr string) bool {
 	return countBrackets == 0
 }
 
-func checkIfOnlyNumber(expr string) bool {
-	for i := 0; i < len(expr); i++ {
-		if isOperation(expr[i]) {
-			return false
-		}
+func isUnaryMinus(expr string, index int) bool {
+	if index == 0 {
+		return true
 	}
-	return true
+	return expr[index-1] == '(' || isOperation(expr[index-1])
 }
 
 func parse(expr string) Expression {
@@ -40,8 +38,9 @@ func parse(expr string) Expression {
 		expr = expr[:len(expr)-1] // this is not allocating a new string!
 		expr = expr[1:len(expr)]
 	}
-	if checkIfOnlyNumber(expr) {
-		parsedValue, _ := strconv.ParseFloat(expr, 64)
+
+	parsedValue, err := strconv.ParseFloat(expr, 64)
+	if err == nil {
 		return NewNumberSingleton(parsedValue)
 	}
 
@@ -58,6 +57,10 @@ func parse(expr string) Expression {
 				rightSubstr := expr[i+1 : len(expr)]
 				return NewAddition(parse(leftSubstr), parse(rightSubstr))
 			} else if expr[i] == '-' {
+				if isUnaryMinus(expr, i) {
+					continue
+				}
+
 				leftSubstr := expr[:i]
 				rightSubstr := expr[i+1 : len(expr)]
 				return NewSubtraction(parse(leftSubstr), parse(rightSubstr))

@@ -10,6 +10,10 @@ func main() {
 	calc2 := expression.NewCalculator("(12.45 + 4)")
 	calc3 := expression.NewCalculator("(6 + (9 * 4))")
 
+	calc5 := expression.NewCalculator("((-12 + 8) * (-2))")
+
+	fmt.Println(calc5.Evaluate())
+
 	fmt.Println(calc.Evaluate())
 	fmt.Println(calc2.Evaluate())
 	fmt.Println(calc3.Evaluate())
